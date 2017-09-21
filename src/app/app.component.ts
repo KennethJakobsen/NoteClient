@@ -10,7 +10,7 @@ export class AppComponent {
   constructor(private noteSvc: NoteService){
 
   }
-  title = 'app works!';
+  title = 'SignalR Notes';
   public AddNote(){
     this.noteSvc.AddNewNote();
   }
