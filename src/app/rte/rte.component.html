@@ -1,0 +1,10 @@
+<fa [name]="'underline'"(mousedown)="preventDefault($event)" (click)="Underline($event)" [size]=".8"></fa>
+<fa [name]="'italic'" (mousedown)="preventDefault($event)" (click)="Italic($event)" [size]=".8"></fa>
+<fa [name]="'bold'" (mousedown)="preventDefault($event)" (click)="Bold($event)" [size]=".8"></fa>
+<fa [name]="'list-ol'" (mousedown)="preventDefault($event)" (click)="OrderedList($event)" [size]=".8"></fa>
+<fa [name]="'list-ul'" (mousedown)="preventDefault($event)" (click)="UnOrderedList($event)" [size]=".8"></fa>
+<span contenteditable="true" (input)="Input($event)" (focus)="Focused($event)" [innerHTML]="text">
+         
+    </span>
+<fa [name]="'check'" (click)="Save($event)" [size]=".8" *ngIf="isDirty"></fa>
+<fa [name]="'ban'" (click)="Reset($event)" [size]=".8" *ngIf="isDirty"></fa>

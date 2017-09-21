@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NoteService} from "./note.service"
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private noteSvc: NoteService){
+
+  }
   title = 'app works!';
+  public AddNote(){
+    this.noteSvc.AddNewNote();
+  }
 }

@@ -1,0 +1,26 @@
+
+    <!--<details>
+    <summary>note</summary>
+    <article contenteditable="true">
+      Test
+    </article>
+  </details>-->
+  <label for="{{Note.Id}}" draggable="true" (dragend)="Move($event)" (dragstart)="Move($event)" (mousedown)="UpdatePosition($event)">
+    <span *ngIf="!isEditingTitle; else edittitle">
+      {{Note.Title}}
+    </span>
+    <ng-template #edittitle>
+    <input type="text" [(ngModel)]="Note.Title"  />
+    </ng-template>
+    <fa [name]="'pencil'" (click)="ToggleEdit($event)"></fa>
+    <fa [name]="'close'" (click)="Remove($event)"></fa>
+  </label> 
+  
+  <input type="checkbox" id="{{Note.Id}}" (change)="ToggleDetails($event)" />
+  
+  <article [style.height.px]="editHeight">
+    
+    <rte [Text]="Note.Description" (Height)="getHeight($event)" (Saved)="contentUpdated($event)"></rte>
+    
+  </article>
+ 

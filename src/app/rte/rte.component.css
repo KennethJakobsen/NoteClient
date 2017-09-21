@@ -1,0 +1,8 @@
+span{
+    top: 0;
+    outline: none;
+    display: block;
+}
+:host(){
+    display: block;
+}
