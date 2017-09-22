@@ -6,7 +6,7 @@ font-family: 'Raleway', sans-serif;
 rte{
     font-family: 'Indie Flower', cursive;
 }
-label{
+label, input[type="text"]{
 
 
 font-family: 'Playfair Display', serif;

@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
 export class ConfigurationService {
 
   public get BaseUrlHttp(){
-    return "http://mealplan.westeurope.cloudapp.azure.com";
+    return "http://cluster.kenned.dk";
   }
    public get BaseUrlSignalR(){
-    return "http://mealplan.westeurope.cloudapp.azure.com:2345";
+    return "http://cluster.kenned.dk:2345";
   }
   constructor() { }
 
