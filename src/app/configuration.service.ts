@@ -7,7 +7,7 @@ export class ConfigurationService {
     return "https://cluster.kenned.dk";
   }
    public get BaseUrlSignalR(){
-    return "http://cluster.kenned.dk:2345";
+    return "https://cluster.kenned.dk:2345";
   }
   constructor() { }
 
